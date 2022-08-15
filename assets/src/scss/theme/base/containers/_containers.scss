@@ -1,0 +1,61 @@
+.container {
+    width: 100%;
+    padding: 0 2rem;
+    margin: auto;
+
+    @include mq(sm) {
+        max-width: 54rem;
+        padding: 0 1.2rem;
+    }
+
+    @include mq(md) {
+        max-width: 72rem;
+    }
+
+    @include mq(lg) {
+        max-width: 96rem;
+    }
+
+    @include mq(xl) {
+        max-width: 114rem;
+    }
+
+    @include mq(xxl) {
+        max-width: 129.6rem;
+        padding: 0;
+    }
+
+    &--small {
+        @include mq(lg) {
+            max-width: 74.8rem;
+            padding: 0;
+        }
+    }
+
+    &--semi_medium {
+        @include mq(lg) {
+            max-width: 85.8rem;
+        }
+    }
+
+    &--medium {
+        @include mq(xl) {
+            max-width: 107.6rem;
+        }
+    }
+
+    &--lgUp {
+        @include mq-max(lg) {
+            max-width: 100%;
+            padding: 0 2rem;
+        }
+    }
+
+    &--attach__arrows {
+        padding: 0;
+
+        @include mq(md) {
+            position: relative;
+        }
+    }
+}

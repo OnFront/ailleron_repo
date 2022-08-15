@@ -1,0 +1,31 @@
+{
+  "name": "ProjectPeople",
+  "version": "1.0.0",
+  "description": "ProjectPeople webpage",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "author": "SikoraTomasz",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "jquery": "^3.5.1",
+    "js-cookie": "^2.2.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "dependencies": {
+    "swiper": "^8.2.6"
+  }
+}

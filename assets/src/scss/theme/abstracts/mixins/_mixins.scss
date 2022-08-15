@@ -1,0 +1,34 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+
+@mixin mq($vp) {
+    @media all and (min-width: map-get($breakpoints, $vp)) {
+        @content;
+    }
+}
+@mixin mq-max($vp) {
+    @media all and (max-width: map-get($breakpoints, $vp) - 1) {
+        @content;
+    }
+}
+
+@mixin font-size($fs, $fe) {
+    font-size: calc(
+        #{$fs} * 1px + (#{$fe} - #{$fs}) * ((100vw - 375px) / (1440 - 375))
+    );
+}
+@mixin ie-only {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      @content;
+    }
+  }

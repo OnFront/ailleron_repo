@@ -1,0 +1,27 @@
+.footer {
+    &__utility {
+        @include mq(lg) {
+            width: 75%;
+        }
+        & li {
+            display: inline-block;
+            margin-right: .8rem;
+            & .link {
+                font-size: 1.3rem;
+                color: $blue_clean_medium;
+            }
+        }
+    }
+
+    & small {
+        margin: 5.6rem 0 1.6rem;
+        color: #fff;
+        font-size: 1.4rem;
+        font-weight: 300;
+        line-height: 2.45rem;
+
+        @include mq(lg) {
+            margin: 4rem 0 1.6rem;
+        }
+    }
+}

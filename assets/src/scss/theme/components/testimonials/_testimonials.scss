@@ -1,0 +1,184 @@
+.testimonials {
+    padding: 8rem 0;
+    text-align: center;
+
+    @include mq(md) {
+        padding: 12rem 0;
+    }
+
+    & .container {
+        position: relative;
+    }
+
+    &__header {
+        margin-bottom: 4rem;
+        @include mq(md) {
+            margin-bottom: 6.4rem;
+        }
+    }
+
+    & .slick-slide {
+        padding: 6.4rem 2.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(79.37deg, rgba(156, 38, 119, 0.85) 2.14%, rgba(55, 112, 159, 0.85) 100.85%);
+        @include mq(xl) {
+            padding: 9.975rem 0 8.025rem 0;
+        }
+     
+    }
+
+    &__carousel {
+        margin-bottom: 6.4rem;
+    }
+
+    &__item {
+        border-radius: 16px;
+        position: relative;
+        &-wrap {
+            width: 100%;
+            @include mq(md) {
+                max-width: 80%;
+            }
+            @include mq(xl) {
+                max-width: 98.8rem;
+            }
+        }
+
+        &-figure {
+            display: flex;
+            flex-wrap: wrap;
+            flex-flow: column-reverse;
+            justify-content: space-between;
+            align-items: center;
+
+            @include mq(md) {
+                flex-flow: row;
+            }
+        }
+
+        &-data {
+           @include mq(md) {
+            text-align: start;
+           }
+        }
+
+        &-name,
+        &-position,
+        & blockquote {
+            color: #fff;
+            & p {
+                color: inherit;
+            }
+        }
+
+        & blockquote {
+            margin-bottom: 4rem;
+            & p {
+                font-weight: 500;
+                line-height: 120%;
+                font-size: 2rem;
+                margin-bottom: 0;
+
+                @include mq(md) {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+        
+        &-name {
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 120%;
+            margin-bottom: .8rem;
+            @include mq(md) {
+                font-size: 2.4rem;
+                line-height: 175%;
+            }
+        }
+
+        &-position {
+            margin-bottom: 0;
+            @include mq(md) {
+                font-size: 2rem;
+                line-height: 120%;
+            }
+        }
+
+        &-photo {
+            max-height: 10rem;
+            max-width: 10rem;
+            margin-bottom: 2rem;
+            @include mq(md) {
+                margin-bottom: 0;
+                max-height: 16rem;
+                max-width: 16rem;
+            }
+            & img {
+                border-radius: 100%;
+                position: relative;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    & .slick-dots {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        gap: 1.2rem;
+        margin: 2rem 0 0 0;
+        @include mq(md) {
+            margin: 6.4rem 0 0 0;
+        }
+        & button {
+            all: unset;
+            color: transparent;
+            position: relative;
+            height: 1.2rem;
+            width: 1.2rem;
+            cursor: pointer;
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                height: inherit;
+                width: inherit;
+                top: 50%;
+                border-radius: 100%;
+                border: 2px solid $grey_transparent;
+            }
+        }
+
+        & .slick-active {
+            & button {
+                &::after {
+                    background: $grey_dark;
+                    border: 2px solid $grey_dark;
+                }
+            }
+        }
+    }
+
+    & .slick-arrow {
+        all: unset;
+        display: none;
+        position: absolute;
+        top: 40%;
+        cursor: pointer;
+        @include mq(md) {
+            display: block;
+        }
+    }
+
+    & .prev-slide {
+        left: 4.8rem;
+    }
+
+    & .next-slide {
+        right: 4.8rem;
+    }
+}

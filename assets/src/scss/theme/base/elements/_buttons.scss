@@ -1,0 +1,139 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: $color__border-button;
+	border-radius: 3px;
+	background: $color__background-button;
+	color: rgba(0, 0, 0, 0.8);
+	line-height: 1;
+	padding: 0.6em 1em 0.4em;
+
+	&:hover {
+		border-color: $color__border-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+	}
+}
+
+
+.button {
+	padding: 1.2rem 2.4rem;
+	color: #fff;
+	font-weight: 700;
+	font-size: 1.6rem;
+	line-height: 175%;
+	display: inline-block;
+	text-decoration: none;
+	border-radius: 8px;
+	margin: 0 auto;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	transition: transform 50ms ease-out;
+	&:hover {
+		transition: transform 50ms ease-out;
+		transform: translateY(-.2rem);
+	}
+
+	& .arrow-right {
+		margin-left: 1.6rem;
+		vertical-align: middle;
+	}
+	@include mq(md) {
+		font-size: 2.4rem;
+	}
+	&--white {
+		border: 1px solid #fff;
+		&:visited,
+		&:hover {
+			background: linear-gradient(90deg, #8AC4BF 0%, #8386B2 100%);;
+			border: 1px solid #ffff;
+			color: #fff;
+		}
+	}
+
+	&--blueLight {
+		border: 1px solid $blue_clean_medium;
+		transition: transform 30ms ease-out;
+		text-align: center;
+		padding: .8rem 1.6rem;
+		font-weight: 300;
+		font-size: 1.6rem;
+		text-transform: capitalize;
+		&:hover {
+			background: linear-gradient(150deg, #389CC5 50%, #5C2987 125%);
+			color: #fff;
+		}
+
+		&:visited,
+		&:active {
+			color: #fff;
+		}
+	}
+
+	&--blue {
+		background-color: $blue_clean_medium;
+		border: 1px solid $blue_clean_medium;
+		color: #fff;
+		&:visited,
+		&:active {
+			background-color: $blue_clean_medium;
+			border: 1px solid $blue_clean_medium;
+			color: #fff;
+
+			& .arrow-right {
+				& path {
+					fill : #fff;
+				}
+			}
+		}
+		&:hover {
+			background-color: #ffff;
+			color: $blue_clean_medium;
+			& .arrow-right {
+				& path {
+					fill : $blue_clean_medium;
+				}
+			}
+		}
+	}
+
+
+	&--hamburger {
+		all: unset;
+		cursor: pointer;
+		@include mq(lg) {
+			display: none;
+		}
+		&:hover {
+			transform: translateY(0);
+		}
+	}
+	&--play {
+		all: unset;
+		display: block;
+		position: relative;
+		z-index: 10;
+		cursor: pointer;
+		width: 2.933rem;
+		height: 3.733rem;
+		transform-origin: center;
+
+		@include mq(md) {
+			width: initial;
+			height: initial;
+		}
+		& svg {
+			width: inherit;
+			height: inherit;
+		}
+
+		&:hover {
+			transform: translateY(0);
+			transition: none;
+		}
+	}
+}

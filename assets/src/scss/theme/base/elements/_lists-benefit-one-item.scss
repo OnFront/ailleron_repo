@@ -1,0 +1,60 @@
+// benefit one benefit
+.benefits__one__benefit {
+    padding: 2rem;
+    background-color: #ffff;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    &-wrap {
+        position: relative;
+        padding-left: 2rem;
+        border-left: 2px dotted $blue_clean_medium;
+        @include mq(lg) {
+            display: flex;
+            border-left: none;
+            padding-left: 0;
+            align-items: center;
+        }
+    }
+    &-dotted {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+	&-icon {
+		margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+		@include mq(lg) {
+            padding-right: 2rem;
+            margin-bottom: 0;
+            height: inherit;
+            position: relative;
+            min-height: 100%;
+            justify-content: center;
+            & img {
+                width: 8rem;
+                min-width: 8rem;
+                height: 8rem;
+            }
+        }
+	}
+
+    &-desc {
+        @include mq(lg) {
+            border-left: 2px dotted $blue_clean_medium;
+            padding-left: 2rem;
+            min-height: 8rem;
+            display: flex;
+            align-items: center;
+        }
+        & h3 {
+            font-size: 2rem;
+            @include mq(xl) {
+                font-size: 2.4rem;
+            }
+        }
+    }
+}
+
+

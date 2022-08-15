@@ -1,0 +1,39 @@
+.pre-footer {
+    background: $black;
+    padding: 8rem 0;
+    @include mq(md) {
+        padding: 12rem 0;
+    }
+    &__header {
+        text-align: center;
+        margin-bottom: 4rem;
+        & h2,
+        & p {
+            color: #ffff;
+        }
+
+        & h2 {
+            font-size: 3rem;
+            line-height: 120%;
+            margin-bottom: 2rem;
+
+            @include mq(md) {
+                font-size: 4.8rem;
+            }
+
+            & span {
+                color: $blue_clean_medium;
+            }
+        }
+
+        & p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__wrap {
+        display: flex;
+        justify-content: center;
+    }
+}

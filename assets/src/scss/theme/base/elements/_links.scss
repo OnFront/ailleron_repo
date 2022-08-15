@@ -1,0 +1,31 @@
+a {
+	color: $color__link;
+	font-size: 1.6rem;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+.footer {
+	& a {
+		cursor: pointer;
+		text-decoration: none;
+		&:not(.button):active,
+		&:not(.button):hover {
+			color: $violet;
+			transition: all 100ms ease-out;
+		}
+	}
+}
