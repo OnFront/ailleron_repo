@@ -1,6 +1,6 @@
 <?php
 
-function openx_google_analytics() { ?>
+function ailleron_google_analytics() { ?>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KWHEE0BDWP"></script>
     <script type="text/javascript">
     window.dataLayer = window.dataLayer || [];
@@ -11,11 +11,11 @@ function openx_google_analytics() { ?>
 <?php
 }
 
-add_action('wp_head','openx_google_analytics', 20);
+add_action('wp_head','ailleron_google_analytics', 20);
 
 
 
-function openx_facebook_pixel() { ?>
+function ailleron_facebook_pixel() { ?>
 
     <script>
     !function(f,b,e,v,n,t,s)
@@ -37,10 +37,10 @@ function openx_facebook_pixel() { ?>
 
 }
 
-add_action('wp_head','openx_facebook_pixel', 20);
+add_action('wp_head','ailleron_facebook_pixel', 20);
 
 
-function openx_linkedin_insight() { ?>
+function ailleron_linkedin_insight() { ?>
     <script type="text/javascript">
         _linkedin_partner_id = "3956196";
         window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
@@ -61,4 +61,4 @@ function openx_linkedin_insight() { ?>
 <?php
 }
 
-add_action('wp_footer','openx_linkedin_insight', 20);
+add_action('wp_footer','ailleron_linkedin_insight', 20);

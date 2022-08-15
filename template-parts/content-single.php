@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package ProjectPeople
+ * @package ailleron
  */
 
 global $post;
@@ -29,7 +29,7 @@ if ( $post_type === 'case_study' ) {
       <div class="entry__intro">
         <ul class="breadcrumbs">
           <li class="breadcrumbs__item">
-            <a href="<?= esc_url( home_url( '/' ) ); ?>">openx</a>
+            <a href="<?= esc_url( home_url( '/' ) ); ?>">ailleron</a>
           </li>
           <li class="breadcrumbs__item">
             <a href="<?= $back_to_url ?>"><?= $breadcrumb_prev_name ?></a>
@@ -85,7 +85,7 @@ if ( $post_type === 'case_study' ) {
         </div>
         <div class="entry__more">
           <a rel="nofollow" class="link-arrow link-arrow--light link-arrow--bottom" href="#post-main">
-            <?php _e( 'Czytaj dalej', 'projectPeople' ) ?><img loading="lazy" class="link-arrow__arrow"
+            <?php _e( 'Czytaj dalej', 'ailleron' ) ?><img loading="lazy" class="link-arrow__arrow"
                                                                src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/svg/arrow.svg" width="24" height="24" alt="">
           </a>
         </div>
@@ -112,7 +112,7 @@ if ( $post_type === 'case_study' ) {
         <?php $tocLinks = get_field( 'table_of_contents' ); ?>
         <?php if ( isset( $tocShow ) && $tocShow && $tocLinks ) : ?>
           <div class="entry__toc">
-            <p><?= __( 'Spis treści', 'projectPeople' ) ?>:</p>
+            <p><?= __( 'Spis treści', 'ailleron' ) ?>:</p>
             <ul class="toc">
               <?php foreach ( $tocLinks as $tocLink ) : ?>
                 <li class="toc__item"><a href="<?= $tocLink['link']['url'] ?>"><?= $tocLink['link']['title'] ?></a></li>
@@ -121,7 +121,7 @@ if ( $post_type === 'case_study' ) {
           </div>
         <?php endif; ?>
         <div class="entry__share">
-          <p><?= __( 'Udostępnij swoim znajomym', 'projectPeople' ) ?>:</p>
+          <p><?= __( 'Udostępnij swoim znajomym', 'ailleron' ) ?>:</p>
           <ul class="share-links">
             <li class="share-links__item share-links__item--facebook">
               <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/sharer.php?u=<?= urlencode( get_permalink() ) ?>">

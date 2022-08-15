@@ -17,5 +17,5 @@ function display_year() {
                     ?>
                 </ul><!-- footer utility -->
         <?php endif; ?>
-        <small>Copyright © <?php display_year(); ?> OpenX. All rights reserved.</small>
+        <small>Copyright © <?php display_year(); ?> ailleron. All rights reserved.</small>
 </div><!-- footer lower -->

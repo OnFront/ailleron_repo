@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package projectPeople
+ * @package ailleron
  */
 
 /**
@@ -14,13 +14,13 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function projectPeople_jetpack_setup() {
+function ailleron_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => 'projectPeople_infinite_scroll_render',
+			'render'    => 'ailleron_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
@@ -33,7 +33,7 @@ function projectPeople_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'projectPeople-style',
+				'stylesheet' => 'ailleron-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
@@ -48,12 +48,12 @@ function projectPeople_jetpack_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'projectPeople_jetpack_setup' );
+add_action( 'after_setup_theme', 'ailleron_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function projectPeople_infinite_scroll_render() {
+function ailleron_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

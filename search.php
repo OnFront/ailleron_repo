@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package ProjectPeople
+ * @package ailleron
  */
 
 get_header();
@@ -26,13 +26,13 @@ get_header();
 
           endwhile;
 
-          \openx\Pagination\custom_pagination();
+          \ailleron\Pagination\custom_pagination();
 
 
           ?>
         <?php else : ?>
           <?php get_search_form(); ?>
-          <div style="margin: 2rem 0"><strong><?= __( 'Nie znaleziono wyników dla szukanej frazy', 'projectPeople' ) ?>.</strong></div>
+          <div style="margin: 2rem 0"><strong><?= __( 'Nie znaleziono wyników dla szukanej frazy', 'ailleron' ) ?>.</strong></div>
         <?php endif; ?>
       </div>
     </div>

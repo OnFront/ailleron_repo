@@ -44,8 +44,8 @@
         },
         {
             "key": "field_62d7d0dcf7b5c",
-            "label": "Visit OpenX",
-            "name": "visit_openx_link",
+            "label": "Visit ailleron",
+            "name": "visit_ailleron_link",
             "type": "link",
             "instructions": "",
             "required": 0,

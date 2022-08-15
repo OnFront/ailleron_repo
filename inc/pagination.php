@@ -1,6 +1,6 @@
 <?php
 
-namespace openx\Pagination;
+namespace ailleron\Pagination;
 
 function custom_pagination( \WP_Query $wp_query = null, $echo = true ) {
 

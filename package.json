@@ -1,7 +1,7 @@
 {
-  "name": "ProjectPeople",
+  "name": "ailleron",
   "version": "1.0.0",
-  "description": "ProjectPeople webpage",
+  "description": "ailleron webpage",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

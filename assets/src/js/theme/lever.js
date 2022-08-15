@@ -1,4 +1,4 @@
-const url = 'https://api.lever.co/v0/postings/openx?mode=json&location=krakow';
+const url = 'https://api.lever.co/v0/postings/ailleron?mode=json&location=krakow';
 
 
 //Checking for potential Lever source or origin parameters

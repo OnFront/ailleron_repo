@@ -1,4 +1,4 @@
 <?php
 
-namespace openx\CPT;
+namespace ailleron\CPT;
 

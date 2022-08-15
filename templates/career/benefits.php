@@ -34,7 +34,7 @@
     <div class="benefits__more">
         <div class="container">
             <div class="button-text">
-                <button><span>+</span>View more benefits of working at OpenX</button>
+                <button><span>+</span>View more benefits of working at ailleron</button>
             </div>
             <?php
                 if(have_rows('more_benefits_repeat')): ?>

@@ -1,10 +1,10 @@
 <?php
 /**
- * projectPeople functions and definitions
+ * ailleron functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package projectPeople
+ * @package ailleron
  */
 
  require_once 'inc/enqueue.php';
@@ -16,7 +16,7 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
-if ( ! function_exists( 'projectPeople_setup' ) ) :
+if ( ! function_exists( 'ailleron_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -24,7 +24,7 @@ if ( ! function_exists( 'projectPeople_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function projectPeople_setup() {
+	function ailleron_setup() {
 
 		if ( function_exists( 'acf_add_options_page' ) ) {
 
@@ -64,10 +64,10 @@ if ( ! function_exists( 'projectPeople_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on projectPeople, use a find and replace
-		 * to change 'projectPeople' to the name of your theme in all the template files.
+		 * If you're building a theme based on ailleron, use a find and replace
+		 * to change 'ailleron' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'projectPeople', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'ailleron', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -89,7 +89,7 @@ if ( ! function_exists( 'projectPeople_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'primary-menu-desktop' => esc_html__( 'Primary menu Desktop', 'projectPeople' ),
+				'primary-menu-desktop' => esc_html__( 'Primary menu Desktop', 'ailleron' ),
 			)
 		);
 
@@ -114,7 +114,7 @@ if ( ! function_exists( 'projectPeople_setup' ) ) :
 		add_theme_support(
 			'custom-background',
 			apply_filters(
-				'projectPeople_custom_background_args',
+				'ailleron_custom_background_args',
 				array(
 					'default-color' => 'ffffff',
 					'default-image' => '',
@@ -141,7 +141,7 @@ if ( ! function_exists( 'projectPeople_setup' ) ) :
 		);
 	}
 endif;
-add_action( 'after_setup_theme', 'projectPeople_setup' );
+add_action( 'after_setup_theme', 'ailleron_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -150,22 +150,22 @@ add_action( 'after_setup_theme', 'projectPeople_setup' );
  *
  * @global int $content_width
  */
-function projectPeople_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'projectPeople_content_width', 640 );
+function ailleron_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'ailleron_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'projectPeople_content_width', 0 );
+add_action( 'after_setup_theme', 'ailleron_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function projectPeople_widgets_init() {
+function ailleron_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'language switcher', 'projectPeople' ),
+			'name'          => esc_html__( 'language switcher', 'ailleron' ),
 			'id'            => 'language-switcher',
-			'description'   => esc_html__( 'Add widgets here.', 'projectPeople' ),
+			'description'   => esc_html__( 'Add widgets here.', 'ailleron' ),
 			'before_widget' => '<div id="%1$s" class="copyright__languages">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -173,7 +173,7 @@ function projectPeople_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'projectPeople_widgets_init' );
+add_action( 'widgets_init', 'ailleron_widgets_init' );
 
 
 /**

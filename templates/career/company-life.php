@@ -29,7 +29,7 @@
                 ?>
                 <div class="company-life__video">
                     <div class="wrapper">
-                        <video poster="<?php echo $poster_url; ?>" class="company-life__video-video stopped" id="openx-video">
+                        <video poster="<?php echo $poster_url; ?>" class="company-life__video-video stopped" id="ailleron-video">
                             <source src="<?php echo $video_source; ?>">
                         </video>
                     </div>

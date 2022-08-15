@@ -16,7 +16,7 @@ const careerPage = document.querySelector('.page-template-template-career');
 
 function videoPlay() {
   if(careerPage) {
-    const video = document.querySelector('#openx-video');
+    const video = document.querySelector('#ailleron-video');
       video.addEventListener('click', ( ) => {     
           const playButton = document.querySelector('.button--play');
 

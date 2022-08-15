@@ -1,14 +1,14 @@
 <?php
 
-namespace openx\Blocks;
+namespace ailleron\Blocks;
 
 
 function block_category( $categories, $post ) {
   return array_merge(
       array(
           array(
-              'slug'  => 'openx',
-              'title' => 'openx',
+              'slug'  => 'ailleron',
+              'title' => 'ailleron',
           ),
       ),
       $categories
@@ -26,7 +26,7 @@ add_action( 'admin_menu', __NAMESPACE__ . '\\reusable_blocks_admin_menu' );
 
 function enqueue_block_assets() {
   if ( is_admin() ) {
-    $handle = 'block-openx-all';
+    $handle = 'block-ailleron-all';
     if ( ! wp_style_is( $handle ) ) {
       $filepath = get_template_directory_uri() . '/assets/dist/css/blocks.css';
       wp_enqueue_style( $handle, $filepath );
@@ -44,7 +44,7 @@ function my_acf_init_block_types() {
         'name'            => 'Hero 1 block',
         'title'           => __( 'Hero 1' ),
         'render_template' => 'template-parts/blocks/hero-1-block.php',
-        'category'        => 'openx',
+        'category'        => 'ailleron',
         'mode'            => 'auto',
         'enqueue_assets'  => __NAMESPACE__ . '\\enqueue_block_assets',
         'supports'       => array('anchor' => true),

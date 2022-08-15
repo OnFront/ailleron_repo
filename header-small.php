@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package ProjectPeople
+ * @package ailleron
  */
 
 ?>
@@ -20,12 +20,12 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <meta name="format-detection" content="telephone=no">
-    <meta property="og:title" content="OpenX Poland Careers: Let’s Build the Top Cloud Solutions Together!" />
-    <meta property="og:description" content="OpenX Poland Team is a perfect match for IT lovers who want to build the World’s top cloud solutions at scale." />
+    <meta property="og:title" content="ailleron Poland Careers: Let’s Build the Top Cloud Solutions Together!" />
+    <meta property="og:description" content="ailleron Poland Team is a perfect match for IT lovers who want to build the World’s top cloud solutions at scale." />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:url" content="https://pl.openx.com" />
-    <meta property="og:sitename" content="OpenX Poland" />
+    <meta property="og:url" content="https://pl.ailleron.com" />
+    <meta property="og:sitename" content="ailleron Poland" />
 
   <?php wp_head(); ?>
 </head>

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package ProjectPeople
+ * @package ailleron
  */
 
 get_header();

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package ProjectPeople
+ * @package ailleron
  */
 
 ?>
@@ -66,7 +66,7 @@
 
     <div class="entry-li__more">
       <a rel="nofollow" class="link-arrow link-arrow--small link-arrow--light link-arrow--right" href="<?= get_permalink(); ?>">
-        <?php _e( 'Czytaj więcej', 'projectPeople' ) ?><img loading="lazy" class="link-arrow__arrow"
+        <?php _e( 'Czytaj więcej', 'ailleron' ) ?><img loading="lazy" class="link-arrow__arrow"
                                                             src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/svg/arrow.svg" width="24" height="24" alt="">
       </a>
     </div>
