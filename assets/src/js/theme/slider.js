@@ -1,9 +1,9 @@
 
 window.addEventListener('DOMContentLoaded', function(){
-    if(body.classList.contains('page-template-template-career')) {
-        carouselInit();
-        carouselHeroEvents();
-    }
+    //if(body.classList.contains('page-template-template-career')) {
+        //carouselInit();
+        //carouselHeroEvents();
+    //}
 })
 
 function carouselInit() {

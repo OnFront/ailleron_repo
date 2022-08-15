@@ -50,12 +50,4 @@
             padding: 0 2rem;
         }
     }
-
-    &--attach__arrows {
-        padding: 0;
-
-        @include mq(md) {
-            position: relative;
-        }
-    }
 }

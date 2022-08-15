@@ -18,14 +18,3 @@ a {
 	}
 }
 
-.footer {
-	& a {
-		cursor: pointer;
-		text-decoration: none;
-		&:not(.button):active,
-		&:not(.button):hover {
-			color: $violet;
-			transition: all 100ms ease-out;
-		}
-	}
-}
