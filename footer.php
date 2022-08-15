@@ -13,13 +13,7 @@
 
 	<footer id="colophon" class="footer">
 			<div class="container container--lgUp">
-				<?php
-					get_template_part('template-parts/footer/logo-dark');
-					get_template_part('template-parts/footer/footer-menu');
-					get_template_part('template-parts/footer/footer-privacy');
-					get_template_part('template-parts/footer/footer-utility');
-					get_template_part('template-parts/footer/footer-socials');
-				?>
+
 			</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
