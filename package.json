@@ -5,9 +5,13 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp"
+    "start": "gulp",
+    "preinstall": "npx npm-force-resolutions"
   },
-  "author": "SikoraTomasz",
+  "resolutions": {
+    "graceful-fs": "^4.2.10"
+  },
+  "author": "Jarosław Decowski",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.14",
@@ -24,8 +28,5 @@
     "jquery": "^3.5.1",
     "js-cookie": "^2.2.1",
     "slick-carousel": "^1.8.1"
-  },
-  "dependencies": {
-    "swiper": "^8.2.6"
   }
 }
