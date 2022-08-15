@@ -1,0 +1,47 @@
+.hero {
+    
+    &__wrap{
+        border-radius: 28px;
+        height: 49.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__content {
+        padding: 3rem 2rem 0 2rem;
+
+        @include mq(lg) {
+            padding: 3rem 0 0 0;
+        }
+
+        & > * {
+            color: #fff;
+        }
+
+        & h1 {
+            margin: 0 0 3rem 0;
+        }
+
+        & p {
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+
+            @include mq(md) {
+                font-size: 1.6rem;
+            }
+        
+            @include mq(lg) {
+                font-size: 2rem;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            
+        }
+
+        & a.button--arrowDown {
+            margin-top: 6.2rem;
+        }
+    }
+}

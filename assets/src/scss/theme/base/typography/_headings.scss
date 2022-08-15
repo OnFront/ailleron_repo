@@ -5,16 +5,32 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-weight: 500;
+	font-weight: 700;
 	line-height: 120%;
 	color: $black;
 }
 
-h2 {
+h1 {
 	font-size: 3.6rem;
-	text-align: center;
-	@include mq(lg) {
+
+	@include mq(md) {
 		font-size: 4.8rem;
+	}
+
+	@include mq(lg) {
+		font-size: 7rem;
+	}
+}
+
+h2 {
+	font-size: 2.4rem;
+	line-height: 4.3rem;
+	@include mq(md) {
+		font-size: 2.8rem;
+	}
+
+	@include mq(lg) {
+		font-size: 3.5rem;
 	}
 }
 

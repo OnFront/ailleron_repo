@@ -1,9 +1,9 @@
 
 window.addEventListener('DOMContentLoaded', function(){
-    //if(body.classList.contains('page-template-template-career')) {
-        //carouselInit();
+    if(body.classList.contains('home')) {
+        carouselInit();
         //carouselHeroEvents();
-    //}
+    }
 })
 
 function carouselInit() {
@@ -11,29 +11,40 @@ function carouselInit() {
     const testimonials = $('.testimonials__carousel');
 
     hero.slick({
-        dots: true,
-        fade: true,
         autoplay: true,
-        autoplaySpeed: 6000,
-        adaptiveHeight: true,
-        prevArrow: $('.prev-slide'),
-        nextArrow: $('.next-slide'),
-        appendArrows: $('.container--attach__arrows'),
-        appendDots: $('.hero__carousel'),
-        customPaging : function(slider, i) {
-            var title = $(slider.$slides[i]).data('tab-name');
-            return '<a class="hero__carousel-tab"> '+title+' </a>';
-        },
+        autoplaySpeed: 2000,
+        slidesToShow: 6,
+        appendArrows: false,
+        infinite: true,
+        touchMove: true,
+        responsive: [
+            {
+              breakpoint: 1336,
+              settings: {
+                slidesToShow: 6,
+              }
+            },
+            {
+                breakpoint: 997,
+                settings: {
+                  slidesToShow: 4,
+                }
+              },
+            {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 3,
+                }
+              },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              }
+            },
+        ]
     });
-
-    testimonials.slick({
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 4500,
-        prevArrow: $('.prev-slide'),
-        nextArrow: $('.next-slide'),
-        appendArrows: $('.testimonials__carousel'),
-    })
 }
 
 function carouselHeroEvents() {

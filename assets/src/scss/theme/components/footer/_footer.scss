@@ -1,0 +1,43 @@
+.footer {
+    margin-bottom: 6.9rem;
+    & .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: column-reverse;
+        gap: 2.4rem;
+        color: $black;
+        background: #F5F5F5;
+        font-size: 1rem;
+        padding: 1.95rem 1.2rem;
+        border-radius: 15px;
+
+        @include mq(md) {
+            flex-flow: row;
+            gap: unset;
+            padding: 1.95rem 4.5rem;
+        }
+    }
+
+    &__menu {
+        display: flex;
+
+        & li {
+            padding: 0 2rem;
+            border-right: 1px solid black;
+            line-height: 1rem;
+            font-size: 1rem;
+            &:last-child {
+                border: none;
+            }
+
+            & a {
+                font-size: inherit;
+                display: block;
+                height: inherit;
+            }
+        }
+
+
+    }
+}

@@ -32,8 +32,30 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
   <header class="header" id="header">
+    <div class="container">
+      <?php
+        if ( function_exists( 'the_custom_logo' ) ): ?>
+          <div class="header__logo">
+            <?php the_custom_logo(); ?>
+          </div>
+      <?php endif ?>
 
 
-   </header>
+      <?php hamburger_button(); ?>
 
+      <div class="header__wrap">
+        <nav class="header__nav">
+          <?php wp_nav_menu( array( 
+            'theme_location' => 'primary-menu-desktop',
+            'menu_class'     => 'no-list menu',
+            'container'      => 'ul',
+            ) ); ?>
+        </nav>
+
+        <?php contact_btn_acf($fieldname = 'contact_button'); ?>
+      </div>
+
+    </div>
+
+  </header>
 

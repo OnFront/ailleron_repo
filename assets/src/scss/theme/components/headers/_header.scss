@@ -1,0 +1,122 @@
+.header {
+    padding: 2.3rem 0 1.4rem 0;
+    background: #fff;
+    @include mq(lg) {
+        padding: 3.9rem 0 2.8rem 0;
+    }
+
+
+    & .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    & .button--contact {
+        @include mq(lg) {
+			margin: 0 0 0 1%;
+		}
+
+        @include mq(xl) {
+			margin: 0 0 0 5%;
+		}
+        @include mq(xxl) {
+			margin: 0 0 0 6.9rem;
+		}
+    }
+    
+    &__logo {
+        @include mq(lg) {
+            padding-left: 2.4rem;
+            margin: .6rem 6% 0 0;
+        }
+
+        @include mq(xxl) {
+            margin: .6rem 12rem 0 0;
+        }
+        & .custom-logo-link {
+            display: flex;
+            align-items: center;
+
+            @include mq(lg) {
+                & img {
+                    min-width: 12.1rem;
+                    min-height: 2.9rem;
+               }
+            }
+         
+        }
+    }
+
+    &__wrap {
+        display: none;
+
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: calc(100% - 6.6rem);
+        position: fixed;
+        padding: 2.4rem 2rem;
+        left: 0;
+        top: 6.6rem;
+        background: grey;
+
+        @include mq(lg) {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            background: unset;
+            flex-flow: row;
+            height: unset;
+            padding: unset;
+            left: unset;
+            top: unset;
+        }
+    }
+
+    & .menu {
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+
+        @include mq(lg) {
+            flex-flow: row;
+            justify-content: space-between;
+        }
+        &-item {
+            padding: .5rem 0;
+            white-space: nowrap;
+            @include mq(lg) {
+                padding: 0 .8rem;
+                margin-top: .5rem;
+            }
+
+            @include mq(xxl) {
+                padding: 0 2rem;
+            }
+
+            &:first-child {
+                margin-top: 2em;
+
+                @include mq(lg) {
+                    margin-top: .5rem;
+                }
+            }
+        }
+    }
+
+    &__nav {
+        @include mq(lg) {
+            margin: 0;
+            width: 100%;
+        }
+    }
+
+    &.expanded {
+        & .header {
+            &__wrap {
+                display: flex;
+            }
+        }
+    }
+}

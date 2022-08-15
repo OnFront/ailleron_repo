@@ -1,11 +1,20 @@
 a {
 	color: $color__link;
-	font-size: 1.6rem;
+	font-size: 1.3rem;
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.10s ease-out;
+	line-height: 1.6rem;
+
 
 	&:hover,
 	&:focus,
 	&:active {
 		color: $color__link-hover;
+	}
+
+	&:hover {
+		transition: color 0.20s ease-out;
 	}
 
 	&:focus {

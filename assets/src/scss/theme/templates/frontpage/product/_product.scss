@@ -1,0 +1,92 @@
+.product {
+    padding: 3.4rem 2rem 0 2rem;
+    display: flex;
+    flex-flow: column;
+    @include mq(md) {
+        flex-flow: row;
+    }
+    @include mq(lg) {
+        padding: 15.1rem 0 0 0;
+    }
+
+    & .col {
+        
+        @include mq(md) {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &--content {
+            @include mq(md) {
+                justify-content: flex-end;
+            }
+            @include mq(xl) {
+                padding-left: 13.5rem;
+                justify-content: center;
+            }
+        }
+
+        &--image {
+            position: relative;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 6rem;
+        position: relative;
+        z-index: 10;
+
+        @include mq(md) {
+            //max-width: 55%;
+            text-align: start;
+        }
+
+        @include mq(lg) {
+            max-width: 45rem;
+            margin-bottom: 0;
+        }
+
+        & h2 {
+            margin: 0 auto 2.7rem auto;
+            width: 80%;
+
+            @include mq(md) {
+                width: 80%;
+                margin: 0 auto 2.7rem 0;
+            }
+        }
+
+        & p {
+            margin-bottom: 3.3rem;       
+        }
+    }
+
+    &__photo {
+        position: relative;
+        @include mq(md) {
+            position: absolute;
+            top: 25%;
+            left: 0;
+            z-index: 1;
+            transform: scale(1.5);
+        }
+
+        @include mq(lg) {
+            transform: scale(1.1);
+            top: 0;
+            left: 1%;
+        }
+
+        @include mq(xl) {
+            top: -2.8rem;
+            left: unset;
+            transform: scale(1);
+            min-width: 717px;
+            min-height: 471px;
+        }
+    }
+}

@@ -43,7 +43,7 @@ Use it to make something cool, have fun, and share what you've learned.
 	- Alignments
 
 --------------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 // Import variables and mixins.
 @import "abstracts/abstracts";
@@ -70,6 +70,12 @@ Use it to make something cool, have fun, and share what you've learned.
 --------------------------------------------------------------*/
 // @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
 // @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
+
+/*--------------------------------------------------------------
+# Templates
+--------------------------------------------------------------*/
+
+@import "templates/templates";
 
 /*--------------------------------------------------------------
 # Components
@@ -99,4 +105,5 @@ Use it to make something cool, have fun, and share what you've learned.
 /* Effects
 --------------------------------------------- */
 @import "utilities/effects";
+
 

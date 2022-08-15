@@ -37,13 +37,6 @@ if ( ! function_exists( 'ailleron_setup' ) ) :
 					'redirect'   => false,
 				)
 			);
-			acf_add_options_page(
-				array(
-					'page_title' => 'Header',
-					'menu_title' => 'Header',
-					'parent_slug' => 'theme-general-settings',
-				)
-			);
 			acf_add_options_sub_page(
 				array(
 					'page_title'  => 'Footer',
@@ -51,15 +44,6 @@ if ( ! function_exists( 'ailleron_setup' ) ) :
 					'parent_slug' => 'theme-general-settings',
 				)
 			);
-      acf_add_options_page(
-          array(
-              'page_title' => 'Main menu',
-              'menu_title' => 'Main menu',
-              'menu_slug'  => 'main-menu-settings',
-              'capability' => 'edit_posts',
-              'redirect'   => false,
-          )
-      );
 		}
 		/*
 		 * Make theme available for translation.
@@ -90,6 +74,7 @@ if ( ! function_exists( 'ailleron_setup' ) ) :
 		register_nav_menus(
 			array(
 				'primary-menu-desktop' => esc_html__( 'Primary menu Desktop', 'ailleron' ),
+				'footer-menu' => esc_html__( 'Footer menu', 'ailleron' ),
 			)
 		);
 
@@ -205,3 +190,57 @@ require get_template_directory() . '/inc/security.php';
 
 add_filter('show_admin_bar', '__return_false');
 
+function text_field_acf( $fieldname ) {
+	if(get_field($fieldname)):
+		the_field($fieldname);
+	endif;
+}
+
+function text_sub_field_acf( $fieldname ) {
+	if(get_sub_field($fieldname)):
+		the_sub_field($fieldname);
+	endif;
+}
+
+function contact_btn_acf( $fieldname ) {
+	$link = get_field($fieldname, 'options');
+	if( $link ): 
+		$link_url = $link['url'];
+		$link_title = $link['title'];
+		$link_target = $link['target'] ? $link['target'] : '_self';
+		?>
+		<a class="button button--contact" role="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+			<svg id="Component_6_12" data-name="Component 6 – 12" xmlns="http://www.w3.org/2000/svg" width="161" height="36" viewBox="0 0 161 36">
+				<rect id="Rectangle_4" data-name="Rectangle 4" width="161" height="36" rx="15" fill="#d50a0a"/>
+				<text id="Contact" transform="translate(88 22)" fill="#fff" font-size="14" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="-29" y="0"><?php echo $link_title; ?></tspan></text>
+				<path id="Icon_material-mail-outline" data-name="Icon material-mail-outline" d="M16.566,6H4.507a1.505,1.505,0,0,0-1.5,1.507L3,16.551a1.512,1.512,0,0,0,1.507,1.507H16.566a1.512,1.512,0,0,0,1.507-1.507V7.507A1.512,1.512,0,0,0,16.566,6Zm0,10.551H4.507V9.015l6.029,3.768,6.029-3.768Zm-6.029-5.276L4.507,7.507H16.566Z" transform="translate(31 5.941)" fill="#fff"/>
+			</svg>
+		</a>
+	<?php endif;
+}
+
+function hamburger_button() { 
+echo 
+	'
+	<button class="button button--hamburger">
+		<svg width="25" height="25" viewBox="0 0 38 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M2.28125 2.44792H35.6146M2.28125 14.9479H35.6146M2.28125 27.4479H35.6146" stroke="#F95157" stroke-width="4.16667" stroke-linecap="round" stroke-linejoin="round"/>
+		</svg>
+	</button>
+	';
+}
+
+function button_arrow_down( $fieldname ) {
+	$link = get_field($fieldname);
+	if( $link ): ?>
+		<a class="button button--arrowDown" role="button" href="<?php echo esc_url( $link ); ?>">
+			<svg id="Component_21_3" data-name="Component 21 – 3" xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49">
+				<circle id="Ellipse_12" data-name="Ellipse 12" cx="24.5" cy="24.5" r="24.5" fill="#d50a0a"/>
+				<g id="Icon_feather-arrow-down" data-name="Icon feather-arrow-down" transform="translate(12.5 11.5)">
+					<path id="Path_537" data-name="Path 537" d="M18,7.5V18" transform="translate(-5.25)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+					<path id="Path_538" data-name="Path 538" d="M18,18l-5.25,5.25L7.5,18" transform="translate(0 -5.25)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+				</g>
+			</svg>
+		</a>
+	<?php endif;
+}
