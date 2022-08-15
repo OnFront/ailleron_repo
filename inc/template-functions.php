@@ -36,22 +36,3 @@ function ailleron_pingback_header() {
 }
 add_action( 'wp_head', 'ailleron_pingback_header' );
 
-
-function videoSource() {
-    $video_source = '';
-    $video_file = get_sub_field('video');
-    $video_url = get_sub_field('video_url');
-
-		if(get_sub_field('video_source') == "File") {
-			if($video_file) {
-				$video_source = $video_file;
-			}
-		}
-    
-		if(get_sub_field('video_source') == "Url") {
-			if($video_url) {
-				$video_source = $video_url;
-			}
-		}
-        return $video_source;
-}

@@ -196,11 +196,6 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
-/**
- * Tracking scripts: Google Analytics, Facebook Pixel, LinkedIn Insight
- */
-
-require get_template_directory() . '/inc/trackingScripts.php';
 
 /**
  * Security
