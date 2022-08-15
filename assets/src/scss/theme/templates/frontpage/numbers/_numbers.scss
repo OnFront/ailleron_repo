@@ -1,5 +1,8 @@
 .numbers {
-    padding: 12.5rem 0 12.5rem 0;
+    padding: 6.25rem 0 6.25rem 0;
+    @include mq(lg) {
+        padding: 12.5rem 0 12.5rem 0;
+    }
     &__header {
         margin-bottom: 6.3rem;
     }
