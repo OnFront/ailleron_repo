@@ -1,7 +1,14 @@
 .header {
     padding: 2.3rem 0 1.4rem 0;
     background: #fff;
+    left: 0;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+
     @include mq(lg) {
+        position: relative;
         padding: 3.9rem 0 2.8rem 0;
     }
 
@@ -12,6 +19,7 @@
     }
 
     & .button--contact {
+        margin: 2.4rem 0 auto 0;
         @include mq(lg) {
 			margin: 0 0 0 1%;
 		}
@@ -57,9 +65,11 @@
         height: calc(100% - 6.6rem);
         position: fixed;
         padding: 2.4rem 2rem;
-        left: 0;
+        transform: translateX(100%);
         top: 6.6rem;
-        background: grey;
+        background: #fff;
+        z-index: 9999;
+        left: 0;
 
         @include mq(lg) {
             display: flex;
@@ -69,8 +79,8 @@
             flex-flow: row;
             height: unset;
             padding: unset;
-            left: unset;
             top: unset;
+            transform: unset;
         }
     }
 
@@ -86,21 +96,27 @@
         &-item {
             padding: .5rem 0;
             white-space: nowrap;
+            text-transform: capitalize;
+            font-size: 1.8rem;
             @include mq(lg) {
+                font-size: 1.3rem;
+                text-transform: unset;
                 padding: 0 .8rem;
                 margin-top: .5rem;
             }
-
             @include mq(xxl) {
                 padding: 0 2rem;
             }
-
             &:first-child {
                 margin-top: 2em;
 
                 @include mq(lg) {
                     margin-top: .5rem;
                 }
+            }
+
+            & a {
+                font-size: inherit;
             }
         }
     }
@@ -116,6 +132,7 @@
         & .header {
             &__wrap {
                 display: flex;
+                border-top: 1px solid rgb(230, 230, 230);
             }
         }
     }

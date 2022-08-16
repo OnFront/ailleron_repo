@@ -1,27 +1,42 @@
 jQuery(function () {
-
-
-
-
+  menuItem();
   hamburgerBtn();
   countingAnimation();
 });
 
 const body = document.querySelector('body');
-
+ 
+function toggleMenu() {
+  const header = document.getElementById('header');
+  const navWrap = document.querySelector('.header__wrap');
+  body.classList.toggle('overflow-hidden');
+  header.classList.toggle('expanded');
+  navWrap.classList.toggle('show-menu');
+}
 
 function hamburgerBtn() {
   const hamburger = document.querySelector('.button--hamburger');
-  const header = document.getElementById('header');
-  
+
   const handleHamburger = () => {
-    body.classList.toggle('overflow-hidden');
-    header.classList.toggle('expanded');
+    toggleMenu();
   }
 
   if(hamburger) {
     hamburger.addEventListener('click', handleHamburger);
   }
+}
+
+function menuItem() {
+  const header = document.getElementById('header');
+  const menuItems = header.querySelectorAll('.menu-item');
+  if(window.innerWidth < 992) {
+    if(menuItems.length > 0) {
+      menuItems.forEach(item => {
+        item.addEventListener('click', toggleMenu);
+      })
+    }
+  }
+
 }
 
 function countingAnimation() {

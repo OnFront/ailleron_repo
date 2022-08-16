@@ -12,3 +12,18 @@
         }
     }
 }
+
+.show-menu {
+    animation: showMenu .25s ease-in-out forwards;
+
+    @keyframes showMenu {
+        0% {
+            transform: translateX(100%);
+        }
+    
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+

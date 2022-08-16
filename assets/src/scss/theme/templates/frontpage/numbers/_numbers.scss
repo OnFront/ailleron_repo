@@ -26,7 +26,6 @@
         justify-content: center;
 
         &-wrap {
-           
             margin: auto;
         }
 
@@ -53,7 +52,7 @@
                 margin-bottom: 0;
                 font-size: 1.4rem;
                 color: $black;
-                padding: 0 1rem;
+                padding: 0 3rem;
                 @include mq(lg) {
                     font-size: 2rem;
                     padding: 0;
