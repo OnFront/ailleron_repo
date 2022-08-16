@@ -17,3 +17,9 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.site {
+	@include mq-max(lg) {
+		padding-top: 8.4rem;
+	}
+}

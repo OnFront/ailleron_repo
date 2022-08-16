@@ -1,5 +1,10 @@
 .footer {
-    margin-bottom: 6.9rem;
+    @include mq(sm) {
+        margin-bottom: 2rem;
+    }
+    @include mq(lg) {
+        margin-bottom: 6.9rem;
+    }
     & .container {
         display: flex;
         justify-content: space-between;
